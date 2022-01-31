@@ -3,9 +3,10 @@ import random
 
 # Create teams with random power
 
-flag_team1 = 'BLACK'
-flag_team2 = 'ORANGE'
+flag_team1 = 'RED'
+flag_team2 = 'BLUE'
 teams_members = 6
+
 
 def create_teams(flag_team, teams_members = teams_members):
     if teams_members <= 0:
@@ -24,8 +25,7 @@ def fighting(team_1=[], team_2=[]):
 
     print('OPPONENT TABLE')
     for i in range(1, len(team_1)):
-        print(team_1[i], end=' ')
-        print(team_2[i])
+        print('Pair N', i, ':', team_1[i], team_2[i])
 
         time.sleep(0.5)
 
