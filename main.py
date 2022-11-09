@@ -19,7 +19,7 @@ def create_teams(flag_team: str, teams_members=teams_members) -> list:
     else:
         team = [random.randint(50, 100) for r in range(teams_members)]
         team.insert(0, flag_team)
-        print("The", flag_team, "team at the beginning", team)
+        print(f"The {flag_team} team at the beginning {team}")
 
         return team
 
@@ -33,7 +33,7 @@ def fighting(team_1=[], team_2=[]):
     """
     print("OPPONENT TABLE")
     for i in range(1, len(team_1)):
-        print("Pair N", i, ":", team_1[i], team_2[i])
+        print(f"Pair N {i} : {team_1[i]} {team_2[i]}")
 
         time.sleep(0.5)
 
@@ -74,19 +74,19 @@ def result(
     time.sleep(2)
 
     if team_1[0] == flag_team1 and team_2[0] == flag_team2:
-        print("The", flag_team1, "team after fight", team_1)
-        print("The", flag_team2, "team after fight", team_2)
+        print(f"The {flag_team1} team after fight {team_1}")
+        print(f"The {flag_team2} team after fight {team_2}")
 
         res_1 = team_1.count(0)
         res_2 = team_2.count(0)
 
         time.sleep(1)
 
-        print("The", flag_team1, "team lost", res_1, "gladiators")
-        print("The", flag_team2, "team lost", res_2, "gladiators")
+        print(f"The {flag_team1} team lost {res_1} gladiators")
+        print(f"The {flag_team2} team lost {res_2} gladiators")
 
         if res_1 > res_2:
-            print(flag_team2, "TEAM WIN !")
+            print(f"{flag_team2} TEAM WIN !")
             if res_2 == 0 and res_1 == teams_members:
                 print("*" * len(over_kill_message))
                 print(over_kill_message)
@@ -101,25 +101,25 @@ def result(
             print("DRAW !")
 
     else:
-        print("The", flag_team2, "team after fight", team_2)
-        print("The", flag_team1, "team after fight", team_1)
+        print(f"The {flag_team2} team after fight {team_2}")
+        print(f"The {flag_team1} team after fight {team_1}")
 
         res_2 = team_2.count(0)
         res_1 = team_1.count(0)
 
         time.sleep(1)
 
-        print("The", flag_team2, "team lost", res_2, "gladiators")
-        print("The", flag_team1, "team lost", res_1, "gladiators")
+        print(f"The {flag_team2} team lost {res_2} gladiators")
+        print(f"The {flag_team1} team lost {res_1} gladiators")
 
         if res_1 > res_2:
-            print(flag_team2, "TEAM WIN !")
+            print(f"{flag_team2} TEAM WIN !")
             if res_2 == 0 and res_1 == teams_members:
                 print("*" * len(over_kill_message))
                 print(over_kill_message)
                 print("*" * len(over_kill_message))
         elif res_1 < res_2:
-            print(flag_team1, "TEAM WIN !")
+            print(f"{flag_team1} TEAM WIN !")
             if res_1 == 0 and res_2 == teams_members:
                 print("*" * len(over_kill_message))
                 print(over_kill_message)

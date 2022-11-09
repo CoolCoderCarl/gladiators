@@ -16,7 +16,7 @@ class Team:
             random.randint(50, 100) for r in range(self.teams_members)
         ]
         team = {self.flag_team: team_members_force}
-        print("The", team[self.flag_team], "team at the beginning", team)
+        print(f"The {team[self.flag_team]} team at the beginning {team}")
         return team
 
 
@@ -30,7 +30,7 @@ class Fighting:
         teams_1 = team_1[flag_team1]
         teams_2 = team_2[flag_team2]
         for i in range(0, len(teams_1)):
-            print("Pair N", i, ":", teams_1[i], teams_2[i])
+            print(f"Pair N {i} : {teams_1[i]} {teams_2[i]}")
 
             time.sleep(0.5)
 
@@ -68,16 +68,16 @@ class Fighting:
 
         time.sleep(2)
 
-        print("The", flag_team1, "team after fight", team_1)
-        print("The", flag_team2, "team after fight", team_2)
+        print(f"The {flag_team1} team after fight {team_1}")
+        print(f"The {flag_team2} team after fight {team_2}")
 
         res_1 = team_1.count(0)
         res_2 = team_2.count(0)
 
         time.sleep(1)
 
-        print("The", flag_team1, "team lost", res_1, "gladiators")
-        print("The", flag_team2, "team lost", res_2, "gladiators")
+        print(f"The {flag_team1} team lost {res_1} gladiators")
+        print(f"The {flag_team2} team lost {res_2} gladiators")
 
         if res_1 > res_2:
             print(flag_team2, self.WIN_MESSAGE)
